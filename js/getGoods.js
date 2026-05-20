@@ -33,8 +33,8 @@ const getGoods = async () => {
     console.log("arr", arr);
 
     localStorage.setItem("data", JSON.stringify(arr));
-    if (window.location.pathname !== "/goods.html") {
-      window.location.href = "/goods.html";
+    if (window.location.pathname !== "./goods.html") {
+      window.location.href = "./goods.html";
     } else {
       renderGoods(arr);
     }
@@ -54,7 +54,7 @@ const getGoods = async () => {
 
   if (
     localStorage.getItem("data") &&
-    window.location.pathname === "/goods.html"
+    window.location.pathname === "./goods.html"
   ) {
     renderGoods(JSON.parse(localStorage.getItem("data")));
   }
